@@ -57,5 +57,5 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ritehist/infra_actions:latest
-            sudo docker stop $(sudo docker sps -a -q)
+            sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 ritehist/infra_actions:latest
